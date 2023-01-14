@@ -1,0 +1,654 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: 5CE(BA4|FA4) (0x02B050DD)" sof_file="../output_files/ap_core.sof">
+  <display_tree gui_logging_enabled="0">
+  </display_tree>
+  <mnemonics>
+    <table name="rx_latch_idx_table" width="8">
+      <symbol name="0000" value="00000001"/>
+      <symbol name="0001" value="00000010"/>
+      <symbol name="0010" value="00000100"/>
+      <symbol name="0011" value="00001000"/>
+      <symbol name="0100" value="00010000"/>
+      <symbol name="0101" value="00100000"/>
+      <symbol name="0110" value="01000000"/>
+      <symbol name="0111" value="10000000"/>
+    </table>
+    <table name="rx_latch_idx_table (1)" width="4">
+      <symbol name="000" value="0001"/>
+      <symbol name="001" value="0010"/>
+      <symbol name="010" value="0100"/>
+      <symbol name="011" value="1000"/>
+    </table>
+    <table name="state_table" width="5">
+      <symbol name="ST_ADDR_0" value="00001"/>
+      <symbol name="ST_READ_0" value="00010"/>
+      <symbol name="ST_RESET" value="00100"/>
+      <symbol name="ST_WRITE_0" value="01000"/>
+      <symbol name="ST_WRITE_1" value="10000"/>
+    </table>
+    <table name="state_table (1)" width="4">
+      <symbol name="ST_IDLE" value="0001"/>
+      <symbol name="ST_RESET" value="0010"/>
+      <symbol name="ST_WRITE32_0" value="0100"/>
+      <symbol name="ST_WRITE32_1" value="1000"/>
+    </table>
+    <table name="state_table (2)" width="6">
+      <symbol name="0000" value="000001"/>
+      <symbol name="0001" value="000010"/>
+      <symbol name="0010" value="000100"/>
+      <symbol name="0011" value="001000"/>
+      <symbol name="0100" value="010000"/>
+      <symbol name="0101" value="100000"/>
+    </table>
+    <table name="tr_state_table" width="3">
+      <symbol name="0000" value="001"/>
+      <symbol name="0001" value="010"/>
+      <symbol name="0010" value="100"/>
+    </table>
+    <table name="state_table (4)" width="4">
+      <symbol name="0000" value="0001"/>
+      <symbol name="0001" value="0010"/>
+      <symbol name="0010" value="0100"/>
+      <symbol name="0011" value="1000"/>
+    </table>
+    <table name="tr_state_table (1)" width="6">
+      <symbol name="0000" value="000001"/>
+      <symbol name="0001" value="000010"/>
+      <symbol name="0010" value="000100"/>
+      <symbol name="0011" value="001000"/>
+      <symbol name="0100" value="010000"/>
+      <symbol name="0101" value="100000"/>
+    </table>
+    <table name="state_table (5)" width="6">
+      <symbol name="0000" value="000001"/>
+      <symbol name="0001" value="000010"/>
+      <symbol name="0010" value="000100"/>
+      <symbol name="0011" value="001000"/>
+      <symbol name="0100" value="010000"/>
+      <symbol name="0101" value="100000"/>
+    </table>
+    <table name="rr_state_table" width="3">
+      <symbol name="RR_STATE_0" value="001"/>
+      <symbol name="RR_STATE_1" value="010"/>
+      <symbol name="RR_STATE_2" value="100"/>
+    </table>
+    <table name="state_table (7)" width="32">
+      <symbol name="ST_BOOT_0" value="00000000000000000000000000000001"/>
+      <symbol name="ST_BOOT_1" value="00000000000000000000000000000010"/>
+      <symbol name="ST_BOOT_2" value="00000000000000000000000000000100"/>
+      <symbol name="ST_BOOT_3" value="00000000000000000000000000001000"/>
+      <symbol name="ST_BOOT_4" value="00000000000000000000000000010000"/>
+      <symbol name="ST_BOOT_5" value="00000000000000000000000000100000"/>
+      <symbol name="ST_BURSTWR_0" value="00000000000000000000000001000000"/>
+      <symbol name="ST_BURSTWR_1" value="00000000000000000000000010000000"/>
+      <symbol name="ST_BURSTWR_2" value="00000000000000000000000100000000"/>
+      <symbol name="ST_BURSTWR_3" value="00000000000000000000001000000000"/>
+      <symbol name="ST_BURSTWR_4" value="00000000000000000000010000000000"/>
+      <symbol name="ST_BURSTWR_5" value="00000000000000000000100000000000"/>
+      <symbol name="ST_BURSTWR_6" value="00000000000000000001000000000000"/>
+      <symbol name="ST_BURSTWR_7" value="00000000000000000010000000000000"/>
+      <symbol name="ST_IDLE" value="00000000000000000100000000000000"/>
+      <symbol name="ST_READ_0" value="00000000000000001000000000000000"/>
+      <symbol name="ST_READ_1" value="00000000000000010000000000000000"/>
+      <symbol name="ST_READ_2" value="00000000000000100000000000000000"/>
+      <symbol name="ST_READ_5" value="00000000000001000000000000000000"/>
+      <symbol name="ST_READ_6" value="00000000000010000000000000000000"/>
+      <symbol name="ST_READ_7" value="00000000000100000000000000000000"/>
+      <symbol name="ST_READ_8" value="00000000001000000000000000000000"/>
+      <symbol name="ST_READ_9" value="00000000010000000000000000000000"/>
+      <symbol name="ST_REFRESH_0" value="00000000100000000000000000000000"/>
+      <symbol name="ST_REFRESH_1" value="00000001000000000000000000000000"/>
+      <symbol name="ST_RESET" value="00000010000000000000000000000000"/>
+      <symbol name="ST_WRITE_0" value="00000100000000000000000000000000"/>
+      <symbol name="ST_WRITE_1" value="00001000000000000000000000000000"/>
+      <symbol name="ST_WRITE_2" value="00010000000000000000000000000000"/>
+      <symbol name="ST_WRITE_3" value="00100000000000000000000000000000"/>
+      <symbol name="ST_WRITE_4" value="01000000000000000000000000000000"/>
+      <symbol name="ST_WRITE_5" value="10000000000000000000000000000000"/>
+    </table>
+    <table name="state_table (6)" width="6">
+      <symbol name="ST_END_TX" value="000001"/>
+      <symbol name="ST_IDLE" value="000010"/>
+      <symbol name="ST_RESET" value="000100"/>
+      <symbol name="ST_RX_BUTTON_1" value="001000"/>
+      <symbol name="ST_RX_BUTTON_2" value="010000"/>
+      <symbol name="ST_TX_SCALER" value="100000"/>
+    </table>
+    <table name="tr_state_table (2)" width="7">
+      <symbol name="TR_IDLE" value="0000001"/>
+      <symbol name="TR_RX_DONE" value="0000010"/>
+      <symbol name="TR_RX_START" value="0000100"/>
+      <symbol name="TR_RX_WAITEDGE" value="0001000"/>
+      <symbol name="TR_TX_CONTINUE" value="0010000"/>
+      <symbol name="TR_TX_DONE" value="0100000"/>
+      <symbol name="TR_TX_START" value="1000000"/>
+    </table>
+    <table name="hstate_table" width="6">
+      <symbol name="ST_DONE_CODE" value="000001"/>
+      <symbol name="ST_DONE_ERR" value="000010"/>
+      <symbol name="ST_DONE_OK" value="000100"/>
+      <symbol name="ST_IDLE" value="001000"/>
+      <symbol name="ST_PARSE" value="010000"/>
+      <symbol name="ST_WORK" value="100000"/>
+    </table>
+    <table name="tstate_table" width="3">
+      <symbol name="TARG_ST_IDLE" value="001"/>
+      <symbol name="TARG_ST_READYTORUN" value="010"/>
+      <symbol name="TARG_ST_WAITRESULT" value="100"/>
+    </table>
+    <table name="RAM_STATE_table (6)" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="request" value="010"/>
+      <symbol name="wait_read" value="100"/>
+    </table>
+    <table name="RAM_STATE_table (7)" width="3">
+      <symbol name="0000" value="001"/>
+      <symbol name="request" value="010"/>
+      <symbol name="wait_read" value="100"/>
+    </table>
+    <table name="sdram_state_table" width="3">
+      <symbol name="sdram_idle" value="001"/>
+      <symbol name="sdram_read_1" value="010"/>
+      <symbol name="sdram_read_2" value="100"/>
+    </table>
+    <table name="sram_state_table" width="13">
+      <symbol name="sram_idle" value="0000000000001"/>
+      <symbol name="sram_read_1" value="0000000000010"/>
+      <symbol name="sram_read_2" value="0000000000100"/>
+      <symbol name="sram_read_3" value="0000000001000"/>
+      <symbol name="sram_read_4" value="0000000010000"/>
+      <symbol name="sram_read_5" value="0000000100000"/>
+      <symbol name="sram_read_6" value="0000001000000"/>
+      <symbol name="sram_write_1" value="0000010000000"/>
+      <symbol name="sram_write_2" value="0000100000000"/>
+      <symbol name="sram_write_3" value="0001000000000"/>
+      <symbol name="sram_write_4" value="0010000000000"/>
+      <symbol name="sram_write_5" value="0100000000000"/>
+      <symbol name="sram_write_6" value="1000000000000"/>
+    </table>
+    <table name="sram_state_table (1)" width="3">
+      <symbol name="sram_idle" value="001"/>
+      <symbol name="sram_read" value="010"/>
+      <symbol name="sram_write" value="100"/>
+    </table>
+    <table name="state_table (3)" width="4">
+      <symbol name="idle" value="0001"/>
+      <symbol name="init_reset" value="0010"/>
+      <symbol name="read_single" value="0100"/>
+      <symbol name="write_burst" value="1000"/>
+    </table>
+    <table name="state_table (8)" width="11">
+      <symbol name="cram_wait_state" value="00000000001"/>
+      <symbol name="idle" value="00000000010"/>
+      <symbol name="init_address_ce0" value="00000000100"/>
+      <symbol name="init_address_ce0_wait_hig" value="00000001000"/>
+      <symbol name="init_address_ce0_wait_low" value="00000010000"/>
+      <symbol name="init_address_ce1" value="00000100000"/>
+      <symbol name="init_address_ce1_wait_hig" value="00001000000"/>
+      <symbol name="init_address_ce1_wait_low" value="00010000000"/>
+      <symbol name="init_reset" value="00100000000"/>
+      <symbol name="read_single" value="01000000000"/>
+      <symbol name="write_burst" value="10000000000"/>
+    </table>
+    <table name="channel_table" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="01" value="010"/>
+      <symbol name="10" value="100"/>
+    </table>
+    <table name="ram_state_table" width="4">
+      <symbol name="idle" value="0001"/>
+      <symbol name="init_reset" value="0010"/>
+      <symbol name="read_single" value="0100"/>
+      <symbol name="write_single" value="1000"/>
+    </table>
+    <table name="state_table (12)" width="11">
+      <symbol name="idle" value="00000000001"/>
+      <symbol name="rd_ack" value="00000000010"/>
+      <symbol name="rd_done" value="00000000100"/>
+      <symbol name="rd_msb" value="00000001000"/>
+      <symbol name="rd_wait_ready" value="00000010000"/>
+      <symbol name="start_wait_ready" value="00000100000"/>
+      <symbol name="start_write_pulse" value="00001000000"/>
+      <symbol name="start_write_wait" value="00010000000"/>
+      <symbol name="startup" value="00100000000"/>
+      <symbol name="wr_msb" value="01000000000"/>
+      <symbol name="wr_wait_ready" value="10000000000"/>
+    </table>
+    <table name="cram_status_table" width="11">
+      <symbol name="idle" value="00000000001"/>
+      <symbol name="rd_ack" value="00000000010"/>
+      <symbol name="rd_done" value="00000000100"/>
+      <symbol name="rd_msb" value="00000001000"/>
+      <symbol name="rd_wait_ready" value="00000010000"/>
+      <symbol name="start_wait_ready" value="00000100000"/>
+      <symbol name="start_write_pulse" value="00001000000"/>
+      <symbol name="start_write_wait" value="00010000000"/>
+      <symbol name="startup" value="00100000000"/>
+      <symbol name="wr_msb" value="01000000000"/>
+      <symbol name="wr_wait_ready" value="10000000000"/>
+    </table>
+    <table name="tState_table" width="5">
+      <symbol name="T0" value="00001"/>
+      <symbol name="T1" value="00010"/>
+      <symbol name="T2" value="00100"/>
+      <symbol name="T3" value="01000"/>
+      <symbol name="T4" value="10000"/>
+    </table>
+    <table name="dmaPhase_table" width="8">
+      <symbol name="D1" value="00000001"/>
+      <symbol name="D2" value="00000010"/>
+      <symbol name="D3" value="00000100"/>
+      <symbol name="DIDLE" value="00001000"/>
+      <symbol name="DRESET" value="00010000"/>
+      <symbol name="D_BA" value="00100000"/>
+      <symbol name="D_BR" value="01000000"/>
+      <symbol name="D_BRA" value="10000000"/>
+    </table>
+    <table name="busPhase_table" width="7">
+      <symbol name="S0" value="0000001"/>
+      <symbol name="S2" value="0000010"/>
+      <symbol name="S4" value="0000100"/>
+      <symbol name="S6" value="0001000"/>
+      <symbol name="SIDLE" value="0010000"/>
+      <symbol name="SRESET" value="0100000"/>
+      <symbol name="SRMC_RES" value="1000000"/>
+    </table>
+    <table name="ram_state_table (1)" width="4">
+      <symbol name="idle" value="0001"/>
+      <symbol name="init_reset" value="0010"/>
+      <symbol name="read_single" value="0100"/>
+      <symbol name="write_single" value="1000"/>
+    </table>
+    <table name="cram_status_table (1)" width="11">
+      <symbol name="idle" value="00000000001"/>
+      <symbol name="rd_ack" value="00000000010"/>
+      <symbol name="rd_done" value="00000000100"/>
+      <symbol name="rd_msb" value="00000001000"/>
+      <symbol name="rd_wait_ready" value="00000010000"/>
+      <symbol name="start_wait_ready" value="00000100000"/>
+      <symbol name="start_write_pulse" value="00001000000"/>
+      <symbol name="start_write_wait" value="00010000000"/>
+      <symbol name="startup" value="00100000000"/>
+      <symbol name="wr_msb" value="01000000000"/>
+      <symbol name="wr_wait_ready" value="10000000000"/>
+    </table>
+    <table name="channel_table (1)" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="01" value="010"/>
+      <symbol name="10" value="100"/>
+    </table>
+    <table name="ram_state_table (2)" width="4">
+      <symbol name="idle" value="0001"/>
+      <symbol name="init_reset" value="0010"/>
+      <symbol name="read_single" value="0100"/>
+      <symbol name="write_single" value="1000"/>
+    </table>
+    <table name="cram_status_table (2)" width="12">
+      <symbol name="idle" value="000000000001"/>
+      <symbol name="rd_ack" value="000000000010"/>
+      <symbol name="rd_done" value="000000000100"/>
+      <symbol name="rd_msb" value="000000001000"/>
+      <symbol name="rd_wait_ready" value="000000010000"/>
+      <symbol name="start_wait_ready" value="000000100000"/>
+      <symbol name="start_write_pulse" value="000001000000"/>
+      <symbol name="start_write_wait" value="000010000000"/>
+      <symbol name="startup" value="000100000000"/>
+      <symbol name="wr_msb" value="001000000000"/>
+      <symbol name="wr_wait_clock" value="010000000000"/>
+      <symbol name="wr_wait_ready" value="100000000000"/>
+    </table>
+    <table name="cram_status_table (3)" width="13">
+      <symbol name="idle" value="0000000000001"/>
+      <symbol name="rd_complete_s_lsb" value="0000000000010"/>
+      <symbol name="rd_read_s_lsb" value="0000000000100"/>
+      <symbol name="rd_wait_s_lsb" value="0000000001000"/>
+      <symbol name="wr_address_lsb" value="0000000010000"/>
+      <symbol name="wr_complete_lsb" value="0000000100000"/>
+      <symbol name="wr_complete_msb" value="0000001000000"/>
+      <symbol name="wr_wait_lsb" value="0000010000000"/>
+      <symbol name="wr_wait_msb" value="0000100000000"/>
+      <symbol name="wr_write_d_lsb" value="0001000000000"/>
+      <symbol name="wr_write_d_msb" value="0010000000000"/>
+      <symbol name="wr_write_s_lsb" value="0100000000000"/>
+      <symbol name="wr_write_s_msb" value="1000000000000"/>
+    </table>
+    <table name="channel_table (2)" width="4">
+      <symbol name="000" value="0001"/>
+      <symbol name="001" value="0010"/>
+      <symbol name="010" value="0100"/>
+      <symbol name="011" value="1000"/>
+    </table>
+    <table name="ram_state_table (3)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="cram_status_table (4)" width="13">
+      <symbol name="idle" value="0000000000001"/>
+      <symbol name="rd_complete_s_lsb" value="0000000000010"/>
+      <symbol name="rd_read_s_lsb" value="0000000000100"/>
+      <symbol name="rd_wait_s_lsb" value="0000000001000"/>
+      <symbol name="wr_address_lsb" value="0000000010000"/>
+      <symbol name="wr_complete_lsb" value="0000000100000"/>
+      <symbol name="wr_complete_msb" value="0000001000000"/>
+      <symbol name="wr_wait_lsb" value="0000010000000"/>
+      <symbol name="wr_wait_msb" value="0000100000000"/>
+      <symbol name="wr_write_d_lsb" value="0001000000000"/>
+      <symbol name="wr_write_d_msb" value="0010000000000"/>
+      <symbol name="wr_write_s_lsb" value="0100000000000"/>
+      <symbol name="wr_write_s_msb" value="1000000000000"/>
+    </table>
+    <table name="RAM_STATE_table" width="5">
+      <symbol name="000" value="00001"/>
+      <symbol name="request" value="00010"/>
+      <symbol name="wait_read_1" value="00100"/>
+      <symbol name="wait_read_2" value="01000"/>
+      <symbol name="wait_write_2" value="10000"/>
+    </table>
+    <table name="RAM_STATE_table (1)" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="request" value="010"/>
+      <symbol name="wait_read" value="100"/>
+    </table>
+    <table name="RAM_STATE_table (2)" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="request" value="010"/>
+      <symbol name="wait_read" value="100"/>
+    </table>
+    <table name="RAM_STATE_table (3)" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="request" value="010"/>
+      <symbol name="wait_read" value="100"/>
+    </table>
+    <table name="RAM_STATE_table (4)" width="3">
+      <symbol name="00" value="001"/>
+      <symbol name="request" value="010"/>
+      <symbol name="wait_read" value="100"/>
+    </table>
+    <table name="RAM_STATE_table (5)" width="5">
+      <symbol name="000" value="00001"/>
+      <symbol name="request" value="00010"/>
+      <symbol name="wait_read_1" value="00100"/>
+      <symbol name="wait_read_2" value="01000"/>
+      <symbol name="wait_write_2" value="10000"/>
+    </table>
+    <table name="cram_status_table (5)" width="13">
+      <symbol name="idle" value="0000000000001"/>
+      <symbol name="rd_complete_s_lsb" value="0000000000010"/>
+      <symbol name="rd_read_s_lsb" value="0000000000100"/>
+      <symbol name="rd_wait_s_lsb" value="0000000001000"/>
+      <symbol name="wr_address_lsb" value="0000000010000"/>
+      <symbol name="wr_complete_lsb" value="0000000100000"/>
+      <symbol name="wr_complete_msb" value="0000001000000"/>
+      <symbol name="wr_wait_lsb" value="0000010000000"/>
+      <symbol name="wr_wait_msb" value="0000100000000"/>
+      <symbol name="wr_write_d_lsb" value="0001000000000"/>
+      <symbol name="wr_write_d_msb" value="0010000000000"/>
+      <symbol name="wr_write_s_lsb" value="0100000000000"/>
+      <symbol name="wr_write_s_msb" value="1000000000000"/>
+    </table>
+    <table name="cram_status_table (6)" width="13">
+      <symbol name="idle" value="0000000000001"/>
+      <symbol name="rd_complete_s_lsb" value="0000000000010"/>
+      <symbol name="rd_read_s_lsb" value="0000000000100"/>
+      <symbol name="rd_wait_s_lsb" value="0000000001000"/>
+      <symbol name="wr_address_lsb" value="0000000010000"/>
+      <symbol name="wr_complete_lsb" value="0000000100000"/>
+      <symbol name="wr_complete_msb" value="0000001000000"/>
+      <symbol name="wr_wait_lsb" value="0000010000000"/>
+      <symbol name="wr_wait_msb" value="0000100000000"/>
+      <symbol name="wr_write_d_lsb" value="0001000000000"/>
+      <symbol name="wr_write_d_msb" value="0010000000000"/>
+      <symbol name="wr_write_s_lsb" value="0100000000000"/>
+      <symbol name="wr_write_s_msb" value="1000000000000"/>
+    </table>
+    <table name="channel_read_table" width="5">
+      <symbol name="000" value="00001"/>
+      <symbol name="001" value="00010"/>
+      <symbol name="010" value="00100"/>
+      <symbol name="011" value="01000"/>
+      <symbol name="100" value="10000"/>
+    </table>
+    <table name="ram_state_table (4)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="channel_read_table (1)" width="5">
+      <symbol name="000" value="00001"/>
+      <symbol name="001" value="00010"/>
+      <symbol name="010" value="00100"/>
+      <symbol name="011" value="01000"/>
+      <symbol name="100" value="10000"/>
+    </table>
+    <table name="ram_state_table (5)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="reset_state_table" width="4">
+      <symbol name="00" value="0001"/>
+      <symbol name="delay_one_clock" value="0010"/>
+      <symbol name="running_core" value="0100"/>
+      <symbol name="wait_for_6_low" value="1000"/>
+    </table>
+    <table name="reset_state_table (1)" width="4">
+      <symbol name="00" value="0001"/>
+      <symbol name="delay_reset" value="0010"/>
+      <symbol name="running_core" value="0100"/>
+      <symbol name="wait_for_6_low" value="1000"/>
+    </table>
+    <table name="ram_state_table (6)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="cram_status_table (7)" width="17">
+      <symbol name="idle" value="00000000000000001"/>
+      <symbol name="rd_address_s_lsb" value="00000000000000010"/>
+      <symbol name="rd_complete_s_lsb" value="00000000000000100"/>
+      <symbol name="rd_complete_s_msb" value="00000000000001000"/>
+      <symbol name="rd_read_s_lsb" value="00000000000010000"/>
+      <symbol name="rd_read_s_msb" value="00000000000100000"/>
+      <symbol name="rd_wait_s_lsb" value="00000000001000000"/>
+      <symbol name="rd_wait_s_msb" value="00000000010000000"/>
+      <symbol name="wr_address_lsb" value="00000000100000000"/>
+      <symbol name="wr_complete_lsb" value="00000001000000000"/>
+      <symbol name="wr_complete_msb" value="00000010000000000"/>
+      <symbol name="wr_wait_lsb" value="00000100000000000"/>
+      <symbol name="wr_wait_msb" value="00001000000000000"/>
+      <symbol name="wr_write_d_lsb" value="00010000000000000"/>
+      <symbol name="wr_write_d_msb" value="00100000000000000"/>
+      <symbol name="wr_write_s_lsb" value="01000000000000000"/>
+      <symbol name="wr_write_s_msb" value="10000000000000000"/>
+    </table>
+    <table name="state_table (9)" width="31">
+      <symbol name="ST_BOOT_0" value="0000000000000000000000000000001"/>
+      <symbol name="ST_BOOT_1" value="0000000000000000000000000000010"/>
+      <symbol name="ST_BOOT_2" value="0000000000000000000000000000100"/>
+      <symbol name="ST_BOOT_3" value="0000000000000000000000000001000"/>
+      <symbol name="ST_BOOT_4" value="0000000000000000000000000010000"/>
+      <symbol name="ST_BOOT_5" value="0000000000000000000000000100000"/>
+      <symbol name="ST_BURSTWR_0" value="0000000000000000000000001000000"/>
+      <symbol name="ST_BURSTWR_1" value="0000000000000000000000010000000"/>
+      <symbol name="ST_BURSTWR_2" value="0000000000000000000000100000000"/>
+      <symbol name="ST_BURSTWR_3" value="0000000000000000000001000000000"/>
+      <symbol name="ST_BURSTWR_4" value="0000000000000000000010000000000"/>
+      <symbol name="ST_BURSTWR_5" value="0000000000000000000100000000000"/>
+      <symbol name="ST_BURSTWR_6" value="0000000000000000001000000000000"/>
+      <symbol name="ST_BURSTWR_7" value="0000000000000000010000000000000"/>
+      <symbol name="ST_IDLE" value="0000000000000000100000000000000"/>
+      <symbol name="ST_READ_0" value="0000000000000001000000000000000"/>
+      <symbol name="ST_READ_1" value="0000000000000010000000000000000"/>
+      <symbol name="ST_READ_2" value="0000000000000100000000000000000"/>
+      <symbol name="ST_READ_5" value="0000000000001000000000000000000"/>
+      <symbol name="ST_READ_6" value="0000000000010000000000000000000"/>
+      <symbol name="ST_READ_7" value="0000000000100000000000000000000"/>
+      <symbol name="ST_READ_8" value="0000000001000000000000000000000"/>
+      <symbol name="ST_READ_9" value="0000000010000000000000000000000"/>
+      <symbol name="ST_REFRESH_0" value="0000000100000000000000000000000"/>
+      <symbol name="ST_REFRESH_1" value="0000001000000000000000000000000"/>
+      <symbol name="ST_RESET" value="0000010000000000000000000000000"/>
+      <symbol name="ST_WRITE_0" value="0000100000000000000000000000000"/>
+      <symbol name="ST_WRITE_1" value="0001000000000000000000000000000"/>
+      <symbol name="ST_WRITE_2" value="0010000000000000000000000000000"/>
+      <symbol name="ST_WRITE_3" value="0100000000000000000000000000000"/>
+      <symbol name="ST_WRITE_4" value="1000000000000000000000000000000"/>
+    </table>
+    <table name="RAM_STATE_table (13)" width="9">
+      <symbol name="0000" value="000000001"/>
+      <symbol name="request" value="000000010"/>
+      <symbol name="wait_read_1" value="000000100"/>
+      <symbol name="wait_read_2" value="000001000"/>
+      <symbol name="wait_read_3" value="000010000"/>
+      <symbol name="wait_read_4" value="000100000"/>
+      <symbol name="wait_write_2" value="001000000"/>
+      <symbol name="wait_write_3" value="010000000"/>
+      <symbol name="wait_write_4" value="100000000"/>
+    </table>
+    <table name="cram_status_table (9)" width="13">
+      <symbol name="idle" value="0000000000001"/>
+      <symbol name="rd_complete_s_lsb" value="0000000000010"/>
+      <symbol name="rd_read_s_lsb" value="0000000000100"/>
+      <symbol name="rd_wait_s_lsb" value="0000000001000"/>
+      <symbol name="wr_address_lsb" value="0000000010000"/>
+      <symbol name="wr_complete_lsb" value="0000000100000"/>
+      <symbol name="wr_complete_msb" value="0000001000000"/>
+      <symbol name="wr_wait_lsb" value="0000010000000"/>
+      <symbol name="wr_wait_msb" value="0000100000000"/>
+      <symbol name="wr_write_d_lsb" value="0001000000000"/>
+      <symbol name="wr_write_d_msb" value="0010000000000"/>
+      <symbol name="wr_write_s_lsb" value="0100000000000"/>
+      <symbol name="wr_write_s_msb" value="1000000000000"/>
+    </table>
+    <table name="channel_read_table (2)" width="5">
+      <symbol name="000" value="00001"/>
+      <symbol name="001" value="00010"/>
+      <symbol name="010" value="00100"/>
+      <symbol name="011" value="01000"/>
+      <symbol name="100" value="10000"/>
+    </table>
+    <table name="ram_state_table (7)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="sdram_state_table (1)" width="3">
+      <symbol name="sdram_idle" value="001"/>
+      <symbol name="sdram_read_1" value="010"/>
+      <symbol name="sdram_read_2" value="100"/>
+    </table>
+    <table name="sram_state_table (2)" width="3">
+      <symbol name="sram_idle" value="001"/>
+      <symbol name="sram_read" value="010"/>
+      <symbol name="sram_write" value="100"/>
+    </table>
+    <table name="channel_read_table (3)" width="6">
+      <symbol name="0000" value="000001"/>
+      <symbol name="0001" value="000010"/>
+      <symbol name="0010" value="000100"/>
+      <symbol name="0011" value="001000"/>
+      <symbol name="0100" value="010000"/>
+      <symbol name="0101" value="100000"/>
+    </table>
+    <table name="ram_state_table (8)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="channel_read_table (4)" width="4">
+      <symbol name="APF_ACCESS" value="0001"/>
+      <symbol name="PROM_ACCESS" value="0010"/>
+      <symbol name="SFIX_ACCESS" value="0100"/>
+      <symbol name="Z80_ACCESS" value="1000"/>
+    </table>
+    <table name="channel_read_table (5)" width="4">
+      <symbol name="000" value="0001"/>
+      <symbol name="001" value="0010"/>
+      <symbol name="010" value="0100"/>
+      <symbol name="011" value="1000"/>
+    </table>
+    <table name="ram_state_table (9)" width="6">
+      <symbol name="idle" value="000001"/>
+      <symbol name="init_reset" value="000010"/>
+      <symbol name="read_16bit" value="000100"/>
+      <symbol name="read_32bit" value="001000"/>
+      <symbol name="write_16bit" value="010000"/>
+      <symbol name="write_32bit" value="100000"/>
+    </table>
+    <table name="reset_state_table (2)" width="4">
+      <symbol name="delay_reset" value="0001"/>
+      <symbol name="running_core" value="0010"/>
+      <symbol name="startup_reset" value="0100"/>
+      <symbol name="wait_for_6_rlow" value="1000"/>
+    </table>
+    <table name="cram_status_table (8)" width="13">
+      <symbol name="idle" value="0000000000001"/>
+      <symbol name="rd_complete_s_lsb" value="0000000000010"/>
+      <symbol name="rd_read_s_lsb" value="0000000000100"/>
+      <symbol name="rd_wait_s_lsb" value="0000000001000"/>
+      <symbol name="wr_address_lsb" value="0000000010000"/>
+      <symbol name="wr_complete_lsb" value="0000000100000"/>
+      <symbol name="wr_complete_msb" value="0000001000000"/>
+      <symbol name="wr_wait_lsb" value="0000010000000"/>
+      <symbol name="wr_wait_msb" value="0000100000000"/>
+      <symbol name="wr_write_d_lsb" value="0001000000000"/>
+      <symbol name="wr_write_d_msb" value="0010000000000"/>
+      <symbol name="wr_write_s_lsb" value="0100000000000"/>
+      <symbol name="wr_write_s_msb" value="1000000000000"/>
+    </table>
+    <table name="save_loop_update_table" width="5">
+      <symbol name="000000" value="00001"/>
+      <symbol name="search_address" value="00010"/>
+      <symbol name="search_check" value="00100"/>
+      <symbol name="search_found_update" value="01000"/>
+      <symbol name="search_hold" value="10000"/>
+    </table>
+  </mnemonics>
+  <static_plugin_mnemonics/>
+  <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="4"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="523776"/>
+    </position_info>
+  </instance>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="96"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <single attribute="lock mode" value="0"/>
+    <single attribute="sof manager visible" value="1"/>
+    <multi attribute="column width" size="23" value="34,34,396,74,67,78,95,96,98,98,88,88,110,101,101,101,101,101,101,101,101,107,151"/>
+    <multi attribute="frame size" size="2" value="1920,1017"/>
+    <multi attribute="jtag widget size" size="2" value="348,204"/>
+  </global_info>
+</session>
