@@ -2,7 +2,7 @@
 
 This is the port of the Neogeo Core made by [Furrtek](https://www.patreon.com/furrtek/posts) to the Analogue Pocket using the APF framework and some of my own code.
 
-### NOTE! read the installation and Usage as the default Bios file has changed and saves can cause an issue. 
+### NOTE! read the installation and Usage as the default Bios file has changed and saves can cause an issue. Also Not all games will like this core so revert to the standard Neogeo core for the pocket
 
 ## Bug fixes in 0.8.0
 
@@ -78,7 +78,7 @@ Yes. Once in the game, press the Anaolgue Pocket's Home button then direct yours
 
 ## Are there bugs?
 
-Yes. The current known bugs are in AOF 1 where some of the sprites are not displayed correcty (Im guessing a masking issue), and sometimes I have seen The Super Spy's logo will not come up. The next build I hope to have these done. There is also other bugs introduced due to the faster clock speed KOF2003 will drop its audio from what I know and when in MGS mode the Video ram is not read correctly from the CPU.
+Yes. The current known bugs are in AOF 1 where some of the sprites are not displayed correcty (Im guessing a masking issue), and sometimes I have seen The Super Spy's logo will not come up. The next build I hope to have these done. There is also other bugs introduced due to the faster clock speed KOF2003 will drop its audio from what I know and when in MGS mode the Video ram is not read correctly from the CPU. You can just bypass this warning from the bios at this moment.
 
 ## Why is the refresh different then to the Mister core?
 Not anymore. im out by only .001 of a frame now!!! YAY
@@ -93,7 +93,7 @@ There is most likely going to be large bugs found in this, but it was fun to try
 
 ## Could you make this faster then 16mhz.
 * Yes but right now Im using the SRAM in the pocket for the main memory, So I would have to swap the LO-ROM to that and bring the Main memory back into the BRAM so I can clock them at the higher speeds.
-* But some games poll the Z80 very fast as well. so that might need a slight overclock too.
+* But some games poll the Z80 very fast as well. So that might need a slight overclock too.
 
 ## Some games are cut off on the sides of the image
 
