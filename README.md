@@ -2,7 +2,7 @@
 
 This is the port of the Neogeo Core made by [Furrtek](https://www.patreon.com/furrtek/posts) to the Analogue Pocket using the APF framework and some of my own code.
 
-### NOTE! read the installation and Usage as the default Bios file has changed and saves can cause an issue. 
+### NOTE! read the installation and Usage as the default Bios file has changed and saves can cause an issue. Also Not all games will like this core so revert to the standard Neogeo core for the pocket
 
 ## Bug fixes in 0.8.0
 
