@@ -58,10 +58,12 @@
                 "mask": "0xFFFFFFFE"
             },
 			{
-                "name": "CPU 16mhz",
+                "name": "CPU 24mhz PCN Turn On",
                 "id": 8,
                 "type": "check",
 				"enabled": true,
+				"persist": true,
+                "defaultval": 1,
                 "address": "0xF0000110",
 				"value": "0x1",
                 "mask": "0xFFFFFFFE"

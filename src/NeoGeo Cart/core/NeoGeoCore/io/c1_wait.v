@@ -26,7 +26,7 @@ module c1_wait(
 	output nDTACK
 );
 
-	reg [2:0] WAIT_CNT;
+	reg [3:0] WAIT_CNT;
 	
 	//assign nPDTACK = ~(nPORT_ZONE | PDTACK);		// Really a NOR ? May stall CPU if PDTACK = GND
 	

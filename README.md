@@ -1,11 +1,12 @@
-# Neogeo Overdrive for Pocket (0.8.0)
+# Neogeo OverDrive for Pocket (0.8.1)
 
 This is the port of the Neogeo Core made by [Furrtek](https://www.patreon.com/furrtek/posts) to the Analogue Pocket using the APF framework and some of my own code.
 
-### NOTE! read the installation and Usage as the default Bios file has changed and saves can cause an issue. Also Not all games will like this core so revert to the standard Neogeo core for the pocket
+### NOTE! read the installation and Usage as the default Bios file has changed and saves can cause an issue. 
 
-## Bug fixes in 0.8.0
+## Bug fixes in 0.8.1
 
+* Overclock the CPU to 24Mhz - Please note that some games do not like beging overclock so as all other CPU providers say (USE AT YOUR OWN RISK!!!)
 * Increased the memory access from the ASYNC CRAM cores.
 * Changed the PLL timing and clocks to the cores. And changed how the B1 chip gets its video clock now from the LSPC chip. Audio still on its own clock from the PLL.
 * AES and MVS modes and clock changes
@@ -16,7 +17,7 @@ This is the port of the Neogeo Core made by [Furrtek](https://www.patreon.com/fu
 * Reloadable bios and game jsons while in the core.
 * Reset has been removed from th eleft trigger to the interact menu.
 * 320 or 304 output for some of thos games that dont use the full screen.
-* Overclock the CPU to 16mhz and duel ported BRAM for the Fast and Slow VDP memory access.
+* masking fixed to CROMS in some games
 
 ## Installation and Usage 
 
@@ -78,22 +79,10 @@ Yes. Once in the game, press the Anaolgue Pocket's Home button then direct yours
 
 ## Are there bugs?
 
-Yes. The current known bugs are in AOF 1 where some of the sprites are not displayed correcty (Im guessing a masking issue), and sometimes I have seen The Super Spy's logo will not come up. The next build I hope to have these done. There is also other bugs introduced due to the faster clock speed KOF2003 will drop its audio from what I know and when in MGS mode the Video ram is not read correctly from the CPU. You can just bypass this warning from the bios at this moment.
+Yes. the current known bugs are in AOF 1 where some of the sprites are not displayed correcty (Im guessing a masking issue), and sometimes I have seen The Super Spy's logo will not come up. The next build I hope to have these done.
 
 ## Why is the refresh different then to the Mister core?
 Not anymore. im out by only .001 of a frame now!!! YAY
-
-## Can this be ported to the Mister core?
-Im sure it could, but im not going to do it right now. But if they where to here is what I changed.
-* Duel ported BRAM - one port for the standard 24mhz clock for the video side.
-* The lspc2 code thats at the top with the new BRAM signals for duel port access.
-* A clock mux for the desired clock frequencys and that output should go to the signal wire in the Neogeo.sv file that I have called CPU_CLOCK. Cores using this - Main_ram, Backup, cpu_68K, neo_pvc, neo_sma, memcard, com, fast_ram_vdp, slow_ram_vdp, lspc2_a2
-* In the 68K processer I have grabed the "12mhz" clock in there for the CLK_68KCLK but I have renamed it M68K_CLKEN. Cores using this syslatch, neo_c1.
-There is most likely going to be large bugs found in this, but it was fun to try and make this faster.
-
-## Could you make this faster then 16mhz.
-* Yes but right now Im using the SRAM in the pocket for the main memory, So I would have to swap the LO-ROM to that and bring the Main memory back into the BRAM so I can clock them at the higher speeds.
-* But some games poll the Z80 very fast as well. So that might need a slight overclock too.
 
 ## Some games are cut off on the sides of the image
 
@@ -117,8 +106,8 @@ Yes that is why I have configered the core so you can have 4 options between 304
 
 Well if you dont like them, you can change them yourself........ in the following json files :-)
 * Video.json - in here there are the top 4 entrys are for the 304 resolution and the bottom 4 are for outputting in 320. From there you can change each one to the aspect ratio you want to see. Look for the aspect_h and aspect_v entries. Make sure you do this for both the 304 and 320 groups. Or mix it up thats your option here :-)
-* interact.json - search for "name": "Video Scaller output", "id": 7, and in that list there are only 4 entrys that work with top and bottom 4 entrys in the Video.json. From here you can name them to what ever you want for your own reference from the Video.json.
-Have a play with it as it will only affect the scaller. Hell, have a go with the rotation with values of 90 or 180 and give yourself a challange :-)
+* interact.json - search for "name": "Video Scaler output", "id": 7, and in that list there are only 4 entrys that work with top and bottom 4 entrys in the Video.json. From here you can name them to what ever you want for your own reference from the Video.json.
+Have a play with it as it will only affect the scaler. Hell, have a go with the rotation with values of 90 or 180 and give yourself a challange :-)
 
 ## The clock does not work
 

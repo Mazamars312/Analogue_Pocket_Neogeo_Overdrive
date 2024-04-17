@@ -623,32 +623,32 @@
     </table>
   </mnemonics>
   <static_plugin_mnemonics/>
-  <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+  <instance enabled="false" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
       <single attribute="active tab" value="1"/>
-      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="31"/>
       <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
       <single attribute="setup vertical scroll position" value="0"/>
-      <single attribute="zoom level denominator" value="4"/>
+      <single attribute="zoom level denominator" value="2"/>
       <single attribute="zoom level numerator" value="1"/>
       <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="523776"/>
+      <single attribute="zoom offset numerator" value="261888"/>
     </position_info>
   </instance>
   <global_info>
     <single attribute="active instance" value="0"/>
     <single attribute="config widget visible" value="1"/>
     <single attribute="data log widget visible" value="1"/>
-    <single attribute="hierarchy widget height" value="96"/>
+    <single attribute="hierarchy widget height" value="109"/>
     <single attribute="hierarchy widget visible" value="1"/>
     <single attribute="instance widget visible" value="1"/>
     <single attribute="jtag widget visible" value="1"/>
     <single attribute="lock mode" value="0"/>
     <single attribute="sof manager visible" value="1"/>
-    <multi attribute="column width" size="23" value="34,34,396,74,67,78,95,96,98,98,88,88,110,101,101,101,101,101,101,101,101,107,151"/>
-    <multi attribute="frame size" size="2" value="1920,1017"/>
+    <multi attribute="column width" size="23" value="34,34,396,74,67,78,95,96,98,98,88,88,110,101,101,101,101,101,101,101,101,107,10"/>
+    <multi attribute="frame size" size="2" value="2558,1147"/>
     <multi attribute="jtag widget size" size="2" value="348,204"/>
   </global_info>
 </session>

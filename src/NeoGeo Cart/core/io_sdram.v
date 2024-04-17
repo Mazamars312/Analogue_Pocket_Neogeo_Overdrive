@@ -81,14 +81,14 @@ assign {phy_ras, phy_cas, phy_we} = cmd;
 	localparam		CMD_SELFENTER		= 3'b001;
 	localparam		CMD_SELFEXIT		= 3'b111;
 
-	localparam		CAS						= 	4'd2;	// timings are for 96mhz
-	localparam		TIMING_LMR				= 	4'd2;	// tLMR = 2ck
+	localparam		CAS						= 	4'd3;	// timings are for 96mhz
+	localparam		TIMING_LMR				= 	4'd3;	// tLMR = 2ck
 	localparam		TIMING_AUTOREFRESH	=	4'd8;	// tRFC = 80
 	localparam		TIMING_PRECHARGE		=	4'd2;	// tRP = 18
 	localparam		TIMING_ACT_ACT			=	4'd8;	// tRC = 60
 	localparam		TIMING_ACT_RW			=	4'd2;	// tRCD = 18
 	localparam		TIMING_ACT_PRECHG		=	4'd6;	// tRAS = 42
-	localparam		TIMING_WRITE			=	4'd2;	// tWR = 2ck
+	localparam		TIMING_WRITE			=	4'd3;	// tWR = 2ck
 
 	reg		[5:0]	state;
 	
@@ -223,7 +223,7 @@ always @(posedge controller_clk) begin
 	// delayed by CAS latency for reads
 	// this is triggered by the read FSM but delayed by 3 clocks
 	// this makes the FSM simple and everybody happy
-	if(enable_dq_read_2) begin
+	if(enable_dq_read_3) begin
 		enable_dq_read_toggle <= ~enable_dq_read_toggle;
 		
 		if(word_op) begin
@@ -304,7 +304,7 @@ always @(posedge controller_clk) begin
 			dc <= 0;
 			cmd <= CMD_LMR;
 			phy_ba <= 'b00;
-			phy_a <= 13'b000000_010_0_000; // CAS 3, burst length 1, sequential
+			phy_a <= 13'b000000_011_0_000; // CAS 3, burst length 1, sequential
 	
 			state <= ST_BOOT_4;
 		end
