@@ -6,7 +6,7 @@ This is the port of the Neogeo Core made by [Furrtek](https://www.patreon.com/fu
 
 ## Bug fixes in 0.8.1
 
-* Overclock the CPU to 24Mhz - Please note that some games do not like beging overclock so as all other CPU providers say (USE AT YOUR OWN RISK!!!)
+* Overclock the CPU to 24Mhz - Please note that some games do not like to be overclock so as all other CPU providers say (USE AT YOUR OWN RISK!!!)
 * Increased the memory access from the ASYNC CRAM cores.
 * Changed the PLL timing and clocks to the cores. And changed how the B1 chip gets its video clock now from the LSPC chip. Audio still on its own clock from the PLL.
 * AES and MVS modes and clock changes
